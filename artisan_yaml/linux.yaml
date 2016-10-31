@@ -1,0 +1,11 @@
+---
+packages:
+  - openssh
+  - nginx
+  - fail2ban
+
+users:
+  linux_admin_1:
+    uid: 1001
+  linux_admin_2:
+    uid: 1001

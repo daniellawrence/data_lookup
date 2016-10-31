@@ -1,0 +1,8 @@
+---
+packages:
+  - steam
+
+users:
+  dlawrenc:
+    uid: 1000
+    gecos: "Daniel Lawrence (local)"  
