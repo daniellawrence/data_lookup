@@ -63,7 +63,7 @@ def ladder_parser(uri):
 
 def loop_merge(current, new, take_first_result=False, level=0):
 
-    for new_key, new_data in new.items():
+    for new_key, new_data in list(new.items()):
         if new_key not in current:
             current[new_key] = copy.copy(new_data)
             continue
@@ -154,6 +154,6 @@ def resolver(node_name):
 
 if __name__ == '__main__':
     f, m = resolver('xps13z')
-    print "-" * 80
+    print("-" * 80)
     pprint.pprint(f)
     pprint.pprint(m)

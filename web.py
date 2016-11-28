@@ -30,7 +30,7 @@ def api_GET_fetch_database(schema, database_name, lookup_value):
 
 @app.route('/api/node/')
 def api_GET_nodes():
-    return jsonify({'nodes': node.keys()})
+    return jsonify({'nodes': list(node.keys())})
 
 
 @app.route('/api/node/<node_name>/')
@@ -61,7 +61,7 @@ def api_GET_first_facts_node(node_name):
 @app.route('/api/facts/<node_name>/FACTS/')
 def api_GET_keys_fact_node(node_name):
     first, merged = resolver(node_name)
-    return jsonify({'facts': first.keys()})
+    return jsonify({'facts': list(first.keys())})
 
 
 @app.route('/api/facts/<node_name>/first/<fact_name>/')
